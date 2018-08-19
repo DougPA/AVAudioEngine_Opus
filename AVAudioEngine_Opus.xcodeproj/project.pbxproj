@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		91482D09210761C800BF4D3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91482D08210761C800BF4D3B /* AppDelegate.swift */; };
+		91482D0B210761C800BF4D3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91482D0A210761C800BF4D3B /* ViewController.swift */; };
+		91482D0D210761C900BF4D3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91482D0C210761C900BF4D3B /* Assets.xcassets */; };
+		91482D10210761C900BF4D3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91482D0E210761C900BF4D3B /* Main.storyboard */; };
+		91482D1921079EC300BF4D3B /* AudioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91482D1821079EC300BF4D3B /* AudioHelper.swift */; };
+		916CE7242119E60B00B37716 /* OpusOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916CE7222119E5F300B37716 /* OpusOSX.framework */; };
+		916CE7252119E60B00B37716 /* OpusOSX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 916CE7222119E5F300B37716 /* OpusOSX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		916CE72F211CDD0F00B37716 /* RingBuffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 916CE728211CDD0E00B37716 /* RingBuffer.mm */; };
+		916CE730211CDD0F00B37716 /* CARingBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 916CE72E211CDD0F00B37716 /* CARingBuffer.cpp */; };
+		9193E085212600AD00908657 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9193E084212600AD00908657 /* README.md */; };
+		91C6AE272129FF7600B2B3BF /* Opus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C6AE262129FF7600B2B3BF /* Opus.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		916CE7262119E60B00B37716 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				916CE7252119E60B00B37716 /* OpusOSX.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		91482D05210761C800BF4D3B /* AVAudioEngine_Opus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVAudioEngine_Opus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		91482D08210761C800BF4D3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		91482D0A210761C800BF4D3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		91482D0C210761C900BF4D3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		91482D0F210761C900BF4D3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		91482D11210761C900BF4D3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91482D12210761C900BF4D3B /* AVAudioEngine_Opus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AVAudioEngine_Opus.entitlements; sourceTree = "<group>"; };
+		91482D1821079EC300BF4D3B /* AudioHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioHelper.swift; sourceTree = "<group>"; };
+		916CE7222119E5F300B37716 /* OpusOSX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpusOSX.framework; sourceTree = "<group>"; };
+		916CE727211CDD0D00B37716 /* AVAudioEngine_Opus-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AVAudioEngine_Opus-Bridging-Header.h"; sourceTree = "<group>"; };
+		916CE728211CDD0E00B37716 /* RingBuffer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RingBuffer.mm; sourceTree = "<group>"; };
+		916CE729211CDD0E00B37716 /* RingBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RingBuffer.h; sourceTree = "<group>"; };
+		916CE72A211CDD0E00B37716 /* CAAtomic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAAtomic.h; sourceTree = "<group>"; };
+		916CE72B211CDD0E00B37716 /* CARingBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARingBuffer.h; sourceTree = "<group>"; };
+		916CE72C211CDD0F00B37716 /* CABitOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CABitOperations.h; sourceTree = "<group>"; };
+		916CE72D211CDD0F00B37716 /* CAAutoDisposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAAutoDisposer.h; sourceTree = "<group>"; };
+		916CE72E211CDD0F00B37716 /* CARingBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CARingBuffer.cpp; sourceTree = "<group>"; };
+		9193E084212600AD00908657 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		91C6AE262129FF7600B2B3BF /* Opus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opus.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		91482D02210761C800BF4D3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				916CE7242119E60B00B37716 /* OpusOSX.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		91482CFC210761C800BF4D3B = {
+			isa = PBXGroup;
+			children = (
+				9193E084212600AD00908657 /* README.md */,
+				916CE72A211CDD0E00B37716 /* CAAtomic.h */,
+				916CE72D211CDD0F00B37716 /* CAAutoDisposer.h */,
+				916CE72C211CDD0F00B37716 /* CABitOperations.h */,
+				916CE72E211CDD0F00B37716 /* CARingBuffer.cpp */,
+				916CE72B211CDD0E00B37716 /* CARingBuffer.h */,
+				916CE729211CDD0E00B37716 /* RingBuffer.h */,
+				916CE728211CDD0E00B37716 /* RingBuffer.mm */,
+				916CE727211CDD0D00B37716 /* AVAudioEngine_Opus-Bridging-Header.h */,
+				916CE7222119E5F300B37716 /* OpusOSX.framework */,
+				91482D07210761C800BF4D3B /* AVAudioEngine_Opus */,
+				91482D06210761C800BF4D3B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		91482D06210761C800BF4D3B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91482D05210761C800BF4D3B /* AVAudioEngine_Opus.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		91482D07210761C800BF4D3B /* AVAudioEngine_Opus */ = {
+			isa = PBXGroup;
+			children = (
+				91482D1821079EC300BF4D3B /* AudioHelper.swift */,
+				91482D08210761C800BF4D3B /* AppDelegate.swift */,
+				91482D0A210761C800BF4D3B /* ViewController.swift */,
+				91482D0C210761C900BF4D3B /* Assets.xcassets */,
+				91482D0E210761C900BF4D3B /* Main.storyboard */,
+				91482D11210761C900BF4D3B /* Info.plist */,
+				91482D12210761C900BF4D3B /* AVAudioEngine_Opus.entitlements */,
+				91C6AE262129FF7600B2B3BF /* Opus.swift */,
+			);
+			path = AVAudioEngine_Opus;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		91482D04210761C800BF4D3B /* AVAudioEngine_Opus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91482D15210761C900BF4D3B /* Build configuration list for PBXNativeTarget "AVAudioEngine_Opus" */;
+			buildPhases = (
+				91482D01210761C800BF4D3B /* Sources */,
+				91482D02210761C800BF4D3B /* Frameworks */,
+				91482D03210761C800BF4D3B /* Resources */,
+				916CE7262119E60B00B37716 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AVAudioEngine_Opus;
+			productName = AVAudioEngine_MicToBuffer;
+			productReference = 91482D05210761C800BF4D3B /* AVAudioEngine_Opus.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91482CFD210761C800BF4D3B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Douglas Adams";
+				TargetAttributes = {
+					91482D04210761C800BF4D3B = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 91482D00210761C800BF4D3B /* Build configuration list for PBXProject "AVAudioEngine_Opus" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 91482CFC210761C800BF4D3B;
+			productRefGroup = 91482D06210761C800BF4D3B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91482D04210761C800BF4D3B /* AVAudioEngine_Opus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		91482D03210761C800BF4D3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9193E085212600AD00908657 /* README.md in Resources */,
+				91482D0D210761C900BF4D3B /* Assets.xcassets in Resources */,
+				91482D10210761C900BF4D3B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		91482D01210761C800BF4D3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91482D1921079EC300BF4D3B /* AudioHelper.swift in Sources */,
+				91482D0B210761C800BF4D3B /* ViewController.swift in Sources */,
+				916CE730211CDD0F00B37716 /* CARingBuffer.cpp in Sources */,
+				91482D09210761C800BF4D3B /* AppDelegate.swift in Sources */,
+				91C6AE272129FF7600B2B3BF /* Opus.swift in Sources */,
+				916CE72F211CDD0F00B37716 /* RingBuffer.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		91482D0E210761C900BF4D3B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91482D0F210761C900BF4D3B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		91482D13210761C900BF4D3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		91482D14210761C900BF4D3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		91482D16210761C900BF4D3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = AVAudioEngine_Opus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.k3tzr.AVAudioEngine-Opus";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "AVAudioEngine_Opus-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		91482D17210761C900BF4D3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = AVAudioEngine_Opus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.k3tzr.AVAudioEngine-Opus";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "AVAudioEngine_Opus-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		91482D00210761C800BF4D3B /* Build configuration list for PBXProject "AVAudioEngine_Opus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91482D13210761C900BF4D3B /* Debug */,
+				91482D14210761C900BF4D3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91482D15210761C900BF4D3B /* Build configuration list for PBXNativeTarget "AVAudioEngine_Opus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91482D16210761C900BF4D3B /* Debug */,
+				91482D17210761C900BF4D3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 91482CFD210761C800BF4D3B /* Project object */;
+}
