@@ -21,7 +21,15 @@ douglas.adams@me.com
 
 Uses Apple Ring Buffer code and an Objective-C++ wrapper for it from:  
 
-* https://github.com/AlesTsurko  
+* https://github.com/AlesTsurko 
+
+Uses OpusOSX.framework, an Objective-C framework built around libopus. 
+
+* https://github.com/DougPA/OpusOSX
+
+For more information on libopus and Opus see:
+
+* http://opus-codec.org
 
 
 
