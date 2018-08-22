@@ -227,22 +227,22 @@ class ViewController                        : NSViewController {
           // ------------------ ENCODE ------------------
 
           // perform Opus encoding
-          let encodedFrames = opus_encode_float(self._encoder,                            // the encoder
-                                                self._bufferOutput.floatChannelData![0],  // source
-                                                Int32(Opus.frameCount),                   // number of frames
-                                                &self._encoderOutput,                     // destination
-                                                Int32(Opus.frameCount))                   // max size of output (bytes)
+          let encodedFrames = opus_encode_float(self._encoder,                            // an encoder
+                                                self._bufferOutput.floatChannelData![0],  // source (interleaved .pcmFloat32)
+                                                Int32(Opus.frameCount),                   // source, frames per channel
+                                                &self._encoderOutput,                     // destination (Opus-encoded bytes)
+                                                Int32(Opus.frameCount))                   // destination, max size (bytes)
           // check for encode errors
           if encodedFrames < 0 { Swift.print("Encoder error - " + String(cString: opus_strerror(encodedFrames))) }
 
           // ------------------ DECODE ------------------
 
           // perform Opus decoding
-          let decodedFrames = opus_decode_float(self._decoder,                            // the decoder
-                                                self._encoderOutput,                      // source
-                                                Int32(encodedFrames),                     // number of bytes
-                                                self._decoderOutput.floatChannelData![0], // destination
-                                                Int32(Opus.frameCount),                   // available frames (per channel)
+          let decodedFrames = opus_decode_float(self._decoder,                            // a decoder
+                                                self._encoderOutput,                      // source (Opus-encoded bytes)
+                                                Int32(encodedFrames),                     // source, number of bytes
+                                                self._decoderOutput.floatChannelData![0], // destination (interleaved .pcmFloat32)
+                                                Int32(Opus.frameCount),                   // destination, frames per channel
                                                 Int32(0))
           // check for decode errors
           if decodedFrames < 0 { Swift.print("Decoder error - " + String(cString: opus_strerror(decodedFrames))) }
